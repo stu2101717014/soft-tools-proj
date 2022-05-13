@@ -28,7 +28,6 @@ jobs:
       
     - name: Build And Push Docker Image
       run: |
-#       curl https://registry-1.docker.io/v2/ && echo Works
        docker info | grep Proxy
        docker login --username ${{ secrets.DOCKER_USERNAME }} --password ${{ secrets.DOCKER_PASSWORD }}
        docker build
