@@ -27,7 +27,7 @@ jobs:
       run: mvn -B package --file parent-proj/pom.xml -e
        
     - name: Build and Push Docker Image
-      uses: mr-smithers-excellent/docker-build-push@v5
+      uses: mr-smithers-excellent/docker-build-push@v5.6
       with:
         image: milenhinkov/soft-tools-proj
         registry: docker.io
