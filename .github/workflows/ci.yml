@@ -31,4 +31,3 @@ jobs:
        docker login -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_PASSWORD }} ${{secrets.DOCKER_REPO}}
        docker build
        docker push
-
