@@ -26,8 +26,4 @@ jobs:
     - name: Build with Maven
       run: |
       mvn -B package --file parent-proj/pom.xml -e
-      docker build . --file parent-proj/Dockerfile --tag my-image-name:$(date +%s)
-      
-   
-
-       
+      docker build . --file parent-proj/Dockerfile
