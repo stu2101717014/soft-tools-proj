@@ -38,8 +38,4 @@ jobs:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
           
-   push:
-    needs: [build, login]
-    runs-on: ubuntu-latest
-    - name: Push image
-      run: docker push
+
