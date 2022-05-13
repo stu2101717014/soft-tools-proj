@@ -27,4 +27,4 @@ jobs:
       run: mvn -B package --file parent-proj/pom.xml -e
       
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
+      run: docker build . --file parent-proj/Dockerfile --tag my-image-name:$(date +%s)
