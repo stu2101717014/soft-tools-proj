@@ -45,7 +45,9 @@ jobs:
   
     steps:
     -  name: Build and push
-       uses: docker/build-push-action@v3
+       uses: mr-smithers-excellent/docker-build-push@v5
        with:
-          push: true
-          tags: milenhinkov/soft-tools-proj:oldest
+            image: milenhinkov/soft-tools-proj
+            registry: docker.io
+            username: ${{ secrets.DOCKERHUB_USERNAME }}
+            password: ${{ secrets.DOCKERHUB_TOKEN }}
