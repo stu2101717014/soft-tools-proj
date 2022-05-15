@@ -27,8 +27,6 @@ jobs:
       run: mvn -B package --file pom.xml -e
       
     push:
-    
-    runs-on: ubuntu-latest
       
     - name: Login
       run : docker login --username ${{ secrets.DOCKERHUB_USERNAME }} --password ${{ secrets.DOCKERHUB_TOKEN }}
