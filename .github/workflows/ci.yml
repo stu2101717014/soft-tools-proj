@@ -27,7 +27,7 @@ jobs:
       run: mvn -B package --file parent-proj/pom.xml -e
       
     - name: Build the Docker image
-      run: docker build . --file parent-proj/Dockerfile --tag my-image-name:latest
+      run: docker build . --file parent-proj/Dockerfile --tag soft-tools-proj:latest
 
   login:
     runs-on: ubuntu-latest
@@ -43,9 +43,6 @@ jobs:
     runs-on: ubuntu-latest
   
     steps:
-      - name: Build and push
-        uses: docker/build-push-action@v3
-        with:
-          push: true
-          tags: milenhinkov/soft-tools-proj:latest
+    - name: Push to hub.docker
+      run: docker push soft-tools-proj:latest
         
