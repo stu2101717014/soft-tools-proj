@@ -37,3 +37,12 @@ jobs:
         with:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
+          
+  push:
+    needs: login
+    runs-on: ubuntu-latest
+  
+    steps:
+    - name: Push to hub.docker
+      run: echo -e "Geeks \bfor \bGeeks"
+        
