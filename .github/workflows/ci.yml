@@ -43,6 +43,9 @@ jobs:
     runs-on: ubuntu-latest
   
     steps:
-    - name: Push to hub.docker
-      run: docker push my-image-name:latest
+        name: Build and push
+        uses: docker/build-push-action@v3
+        with:
+          push: true
+          tags: milenhinkov/soft-tools-proj:latest
         
