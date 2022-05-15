@@ -36,7 +36,7 @@ jobs:
       run:  docker build -t docker-whale .
       
     - name: Tag
-      run: docker tag af340544ed62 milenhinkov/soft-tools-proj:latest
+      run: docker tag milenhinkov/soft-tools-proj:latest
       
     - name: Push
       run: docker push milenhinkov/soft-tools-proj:latest
